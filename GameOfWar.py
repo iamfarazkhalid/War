@@ -74,7 +74,11 @@ def main():
                 print("{} and {} have same rank cards! It's time for War!".format(firstPlayerName, secondPlayerName))
                 
                 #If and else if statement to check if player has enough cards to play the game of War.
-                if len(PlayerNumberOne.deckOfPlayer) < 3:
+                if ((len(PlayerNumberOne.deckOfPlayer) < 3) and (len(PlayerNumberTwo.deckOfPlayer) < 3)):
+                    print("You both don't have enough cards! The game is a draw!")
+                    gameActiveStatus = False
+                    
+                elif len(PlayerNumberOne.deckOfPlayer) < 3:
                     print("\n{} does not have enough cards for War.".format(PlayerNumberOne.playerName))
                     print("{} Wins!\n".format(PlayerNumberTwo.playerName))
                     gameActiveStatus = False
