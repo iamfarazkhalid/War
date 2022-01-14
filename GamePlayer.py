@@ -21,4 +21,4 @@ class ParticipatingPlayer():
             print(card)
 
     def lenOfDeck(self):
-        print("Card in Hand: {}".format(len(self.deckOfPlayer)))
+        return len(self.deckOfPlayer)
